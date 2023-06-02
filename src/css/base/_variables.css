@@ -5,13 +5,15 @@
   --desktop-breakpoint: 1280px;
   /* ====================colors==================== */
   --accent-color: #502f9d;
-  --main-background-color: #ebd8ff;
-  --dark-background-color: #502f9d;
+  --secondary-color: #ebd8ff;
 
-  --primary-text-color: #502f9d;
-  --secondary-text-color: #ebd8ff;
+  --main-background-color: var(--secondary-color);
+  --dark-background-color: var(--accent-color);
 
-  --btn-default-color: #ebd8ff;
+  --primary-text-color: var(--accent-color);
+  --secondary-text-color: var(--secondary-color);
+
+  --btn-default-color: var(--secondary-color);
   --btn-default-hover-color: #6744b7;
   --btn-following-color: #5cd3a8;
   --btn-following-hover-color: #54c099;
@@ -21,6 +23,7 @@
   --btn-gradient-end: #9bd0ff;
 
   /* ====================shadow==================== */
+  --box-shadow-item: -2.6px 6.9px 20.6px 0px var(--accent-color);
   --box-shadow-1: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff
     inset;
   --box-shadow-2: 0px 3.4369285106658936px 3.4369285106658936px 0px #0000000f;
