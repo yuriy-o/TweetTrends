@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Section = styled.section`
-  width: 1200px;
+  width: var(--desktop-breakpoint);
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;

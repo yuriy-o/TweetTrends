@@ -14,18 +14,18 @@
 
 .tweetsList {
   display: grid;
-  /* justify-content: center */
+  justify-content: center;
 
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   grid-gap: 2em;
-  max-width: calc(100% - 4em); /* Відступи від країв по 2em */
+  max-width: calc(100% - 4em);
   margin: 0 auto;
 
   @media (min-width: 880px) {
     grid-template-columns: repeat(2, minmax(380px, 1fr));
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1280px) {
     grid-template-columns: repeat(3, minmax(380px, 1fr));
   }
 }
@@ -34,20 +34,17 @@
   display: flex;
   flex-direction: column;
 
-  background-color: #502f9d;
+  background-color: var(--dark-background-color);
   width: 380px;
   height: 460px;
   border-radius: 20px;
-  box-shadow: -2.6px 6.9px 20.6px 0px #0000003b;
+  box-shadow: -2.6px 6.9px 20.6px 0px var(--dark-background-color);
 }
 
 .topWrapper {
-  /* height: 230px; */
   padding: 38px 36px 18px 36px;
 }
 .clouds {
-  /* margin-bottom: 38px; */
-  margin: 0;
 }
 .goitLogo {
   position: absolute;
@@ -58,10 +55,10 @@
   position: relative;
   height: 8px;
 
-  background-color: #ebd8ff;
-  box-shadow: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff inset;
-  box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px #0000000f;
-  box-shadow: 0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
+  background-color: var(--main-background-color);
+  box-shadow: var(--box-shadow-1);
+  box-shadow: var(--box-shadow-2);
+  box-shadow: var(--box-shadow-3);
 }
 .bagel {
   position: absolute;
@@ -73,10 +70,10 @@
   height: 80px;
   border-radius: 50%;
 
-  background-color: #ebd8ff;
-  box-shadow: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff inset;
-  box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px #0000000f;
-  box-shadow: 0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
+  background-color: var(--main-background-color);
+  box-shadow: var(--box-shadow-1);
+  box-shadow: var(--box-shadow-2);
+  box-shadow: var(--box-shadow-3);
 }
 .avatar {
   position: absolute;
@@ -99,25 +96,25 @@
   align-items: center;
 }
 .tweets {
-  font-family: Montserrat;
+  font-family: var(--font-family);
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  color: #ebd8ff;
+  color: var(--secondary-text-color);
 
   margin-top: 62px;
   margin-bottom: 16px;
 }
 .followers {
-  font-family: Montserrat;
+  font-family: var(--font-family);
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  color: #ebd8ff;
+  color: var(--secondary-text-color);
 
   margin-bottom: 26px;
 }
@@ -136,41 +133,40 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  color: #502f9d;
 }
 .follow {
-  background-color: #ebd8ff;
+  background-color: var(--btn-default-color);
 
   &:hover,
   &:focus {
-    border: 1px solid #ebd8ff;
+    border: 1px solid var(--btn-default-color);
 
-    background-color: #6744b7;
+    background-color: var(--btn-default-hover-color);
     .followText {
-      color: #ebd8ff;
+      color: var(--secondary-text-color);
     }
   }
 }
 .following {
-  background-color: #5cd3a8;
+  background-color: var(--btn-following-color);
 
   &:hover,
   &:focus {
-    border: 1px solid #128f61;
+    border: 1px solid var(--btn-following-border-color);
 
-    background-color: #54c099;
+    background-color: var(--btn-following-hover-color);
     .followText {
-      color: #ebd8ff;
+      color: var(--secondary-text-color);
     }
   }
 }
 
 .followText {
-  font-family: Montserrat;
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
-  color: #502f9d;
+  color: var(--primary-text-color);
 }

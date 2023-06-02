@@ -4,7 +4,7 @@ export const Section = styled.section`
   display: flex;
   flex-direction: column
 
-  max-width: 1280px;
+  max-width: var(--desktop-breakpoint);
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;

@@ -4,20 +4,27 @@
   --tablet-breakpoint: 768px;
   --desktop-breakpoint: 1280px;
   /* ====================colors==================== */
-  --accent-color: #ff8356;
-  --auth-nav-color: #ffc107;
-  --main-background-color: #fef9f9;
-  --primary-text-color: #111111;
-  --secondary-text-color: #fff;
-  --btn-disabled-color: #cce4fb;
-  --btn-default-color: #54adff;
-  --green: #00c3ad;
-  --red: #f43f5e;
+  --accent-color: #502f9d;
+  --main-background-color: #ebd8ff;
+  --dark-background-color: #502f9d;
+
+  --primary-text-color: #502f9d;
+  --secondary-text-color: #ebd8ff;
+
+  --btn-default-color: #ebd8ff;
+  --btn-default-hover-color: #6744b7;
+  --btn-following-color: #5cd3a8;
+  --btn-following-hover-color: #54c099;
+  --btn-following-border-color: #128f61;
+
   --btn-gradient-start: #419ef1;
   --btn-gradient-end: #9bd0ff;
-  /* gradient from 419EF1 to 9BD0FF */
 
+  /* ====================shadow==================== */
+  --box-shadow-1: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff
+    inset;
+  --box-shadow-2: 0px 3.4369285106658936px 3.4369285106658936px 0px #0000000f;
+  --box-shadow-3: 0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
   /* ====================font==================== */
-
-  --font-family: 'Manrope';
+  --font-family: 'Montserrat';
 }

@@ -10,19 +10,19 @@ export const TweetsList = () => {
   const [tweets, setTweets] = useState([]);
 
   useEffect(() => {
-    const savedState = localStorage.getItem('tweetsState');
+    const savedState = JSON.parse(localStorage.getItem('tweetsState'));
 
-    console.log('savedState >>>>', savedState);
-
-    if (savedState) {
-      setTweets(JSON.parse(savedState));
+    if (savedState && savedState.length > 0) {
+      setTweets(savedState);
     } else {
       API.getTweets().then(data => setTweets(data));
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('tweetsState', JSON.stringify(tweets));
+    if (tweets.length > 0) {
+      localStorage.setItem('tweetsState', JSON.stringify(tweets));
+    }
   }, [tweets]);
 
   const handleFollowButtonClick = userId => {
