@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/TweetTrends/static/css/main.a6e9f9e3.css",
+    "main.js": "/TweetTrends/static/js/main.b2fc2194.js",
+    "static/js/304.0c345d5f.chunk.js": "/TweetTrends/static/js/304.0c345d5f.chunk.js",
+    "static/css/454.b616db1a.chunk.css": "/TweetTrends/static/css/454.b616db1a.chunk.css",
+    "static/js/454.f3167200.chunk.js": "/TweetTrends/static/js/454.f3167200.chunk.js",
+    "static/js/815.8deb2bae.chunk.js": "/TweetTrends/static/js/815.8deb2bae.chunk.js",
+    "static/media/Montserrat-Medium.ttf": "/TweetTrends/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
+    "static/media/Montserrat-Bold.ttf": "/TweetTrends/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
+    "static/media/clouds.png": "/TweetTrends/static/media/clouds.032662a2a907475127d7.png",
+    "static/media/photo-not-found.jpg": "/TweetTrends/static/media/photo-not-found.08e2fa5ab1fad1ab1fd5.jpg",
+    "index.html": "/TweetTrends/index.html",
+    "main.a6e9f9e3.css.map": "/TweetTrends/static/css/main.a6e9f9e3.css.map",
+    "main.b2fc2194.js.map": "/TweetTrends/static/js/main.b2fc2194.js.map",
+    "304.0c345d5f.chunk.js.map": "/TweetTrends/static/js/304.0c345d5f.chunk.js.map",
+    "454.b616db1a.chunk.css.map": "/TweetTrends/static/css/454.b616db1a.chunk.css.map",
+    "454.f3167200.chunk.js.map": "/TweetTrends/static/js/454.f3167200.chunk.js.map",
+    "815.8deb2bae.chunk.js.map": "/TweetTrends/static/js/815.8deb2bae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6e9f9e3.css",
+    "static/js/main.b2fc2194.js"
+  ]
+}
