@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../utils/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../../utils/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.tweetsList {
+  display: grid;
+  /* justify-content: center */
+
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-gap: 2em;
+  max-width: calc(100% - 4em); /* Відступи від країв по 2em */
+  margin: 0 auto;
+
+  @media (min-width: 880px) {
+    grid-template-columns: repeat(2, minmax(380px, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(380px, 1fr));
+  }
+}
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #502f9d;
+  width: 380px;
+  height: 460px;
+  border-radius: 20px;
+  box-shadow: -2.6px 6.9px 20.6px 0px #0000003b;
+}
+
+.topWrapper {
+  /* height: 230px; */
+  padding: 38px 36px 18px 36px;
+}
+.clouds {
+  /* margin-bottom: 38px; */
+  margin: 0;
+}
+.goitLogo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.separator {
+  position: relative;
+  height: 8px;
+
+  background-color: #ebd8ff;
+  box-shadow: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff inset;
+  box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px #0000000f;
+  box-shadow: 0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
+}
+.bagel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  background-color: #ebd8ff;
+  box-shadow: 0px 3.4369285106658936px 2.5776965618133545px 0px #fbf8ff inset;
+  box-shadow: 0px 3.4369285106658936px 3.4369285106658936px 0px #0000000f;
+  box-shadow: 0px -1.7184642553329468px 3.4369285106658936px 0px #ae7be3 inset;
+}
+.avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.downWrapper {
+  height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tweets {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ebd8ff;
+
+  margin-top: 62px;
+  margin-bottom: 16px;
+}
+.followers {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ebd8ff;
+
+  margin-bottom: 26px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 196px;
+  height: fit-content;
+  min-height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #502f9d;
+}
+.follow {
+  background-color: #ebd8ff;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #ebd8ff;
+
+    background-color: #6744b7;
+    .followText {
+      color: #ebd8ff;
+    }
+  }
+}
+.following {
+  background-color: #5cd3a8;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #128f61;
+
+    background-color: #54c099;
+    .followText {
+      color: #ebd8ff;
+    }
+  }
+}
+
+.followText {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #502f9d;
+}

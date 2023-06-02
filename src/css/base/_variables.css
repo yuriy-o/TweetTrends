@@ -1,0 +1,23 @@
+:root {
+  /* ====================breakpoints==================== */
+  --mobile-breakpoint: 320px;
+  --tablet-breakpoint: 768px;
+  --desktop-breakpoint: 1280px;
+  /* ====================colors==================== */
+  --accent-color: #ff8356;
+  --auth-nav-color: #ffc107;
+  --main-background-color: #fef9f9;
+  --primary-text-color: #111111;
+  --secondary-text-color: #fff;
+  --btn-disabled-color: #cce4fb;
+  --btn-default-color: #54adff;
+  --green: #00c3ad;
+  --red: #f43f5e;
+  --btn-gradient-start: #419ef1;
+  --btn-gradient-end: #9bd0ff;
+  /* gradient from 419EF1 to 9BD0FF */
+
+  /* ====================font==================== */
+
+  --font-family: 'Manrope';
+}
