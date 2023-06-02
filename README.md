@@ -1,3 +1,3 @@
 # TweetTrends – Тестове завдання
 
-![Creating repo from a template step 1](./assets/5.jpg)
+![Creating repo from a template step 1](./public/preview.jpg)
