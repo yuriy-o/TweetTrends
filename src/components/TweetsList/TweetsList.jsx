@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
+// import { Link } from 'react-router-dom';
+
 import * as API from '../../utils/Api';
+import { addComma } from '../../utils/addComma';
+
 import photoNotFound from '../../utils/images/photo-not-found.jpg';
 import clouds from '../../utils/images/clouds.png';
 import goit from '../../utils/images/goit.png';
+
 import styles from './tweestsList.module.css';
-import { addComma } from '../../utils/addComma';
 
 export const TweetsList = () => {
   const [tweets, setTweets] = useState([]);

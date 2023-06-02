@@ -1,12 +1,12 @@
 import { TweetsList } from 'components/TweetsList/TweetsList';
 
-import { Section } from './Tweets.styled';
+import styles from './tweets.module.css';
 
 const Tweets = () => {
   return (
-    <Section>
+    <section className={styles.tweetsSection}>
       <TweetsList />
-    </Section>
+    </section>
   );
 };
 export default Tweets;

@@ -1,31 +1,24 @@
 import { Outlet } from 'react-router-dom';
-// import { MdHome } from 'react-icons/md';
-// import { AiOutlineTwitter } from 'react-icons/ai';
-// import { AiTwotoneHome, AiOutlineTwitter } from 'react-icons/ai';
 
-import {
-  Container,
-  HeaderLink,
-  HomeIcon,
-  TwitterIcon,
-  WrapHeader,
-} from './Header.styled';
+import { AiTwotoneHome, AiOutlineTwitter } from 'react-icons/ai';
+
+import styles from './header.module.css';
 
 export const SharedLayout = () => {
   return (
     <>
-      <WrapHeader>
-        <Container>
-          <HeaderLink href="/TweetTrends/">
-            <HomeIcon />
+      <header className={styles.header}>
+        <div className={styles.container}>
+          <a href="/TweetTrends/" className={styles.menuLink}>
+            <AiTwotoneHome className={styles.iconHome} />
             Home
-          </HeaderLink>
-          <HeaderLink href="/TweetTrends/tweets">
-            <TwitterIcon />
+          </a>
+          <a href="/TweetTrends/tweets" className={styles.menuLink}>
+            <AiOutlineTwitter className={styles.iconTweet} />
             Tweets
-          </HeaderLink>
-        </Container>
-      </WrapHeader>
+          </a>
+        </div>
+      </header>
       <main>
         <Outlet />
       </main>

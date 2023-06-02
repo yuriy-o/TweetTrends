@@ -38,7 +38,7 @@
   width: 380px;
   height: 460px;
   border-radius: 20px;
-  box-shadow: -2.6px 6.9px 20.6px 0px var(--dark-background-color);
+  box-shadow: var(--box-shadow-item);
 }
 
 .topWrapper {
