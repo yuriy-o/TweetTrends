@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import * as API from '../../utils/Api';
 import { addComma } from '../../utils/addComma';
@@ -10,7 +10,7 @@ import goit from '../../utils/images/goit.png';
 
 import styles from './tweestsList.module.css';
 
-export const TweetsList = () => {
+export const TweetsList = React.memo(() => {
   const [tweets, setTweets] = useState([]);
 
   useEffect(() => {
@@ -48,55 +48,62 @@ export const TweetsList = () => {
   };
 
   return (
-    <ul className={styles.tweetsList}>
-      {tweets.map(({ id, user, tweets, followers, avatar, isFollowing }) => {
-        const followersWithComma = addComma(followers);
-        const followButtonText = isFollowing ? 'FOLLOWING' : 'FOLLOW';
-        const followButtonClass = isFollowing
-          ? styles.following
-          : styles.follow;
+    <>
+      <div className={styles.linkWrap}>
+        <Link to="/" className={styles.goBackLink}>
+          &lt; Go Back
+        </Link>
+      </div>
+      <ul className={styles.tweetsList}>
+        {tweets.map(({ id, user, tweets, followers, avatar, isFollowing }) => {
+          const followersWithComma = addComma(followers);
+          const followButtonText = isFollowing ? 'FOLLOWING' : 'FOLLOW';
+          const followButtonClass = isFollowing
+            ? styles.following
+            : styles.follow;
 
-        return (
-          <li key={id} className={styles.item}>
-            <div className={styles.topWrapper}>
-              <img
-                className={styles.clouds}
-                src={clouds}
-                alt="Clouds with a question mark and a progress bar"
-                loading="lazy"
-              />
-              <img
-                className={styles.goitLogo}
-                src={goit}
-                alt="The logo of GoIT company"
-                loading="lazy"
-              />
-            </div>
-            <div className={styles.separator}>
-              <div className={styles.bagel}></div>
-              <img
-                className={styles.avatar}
-                src={avatar ? avatar : photoNotFound}
-                alt={user}
-                title={user}
-                loading="lazy"
-              />
-            </div>
-            <div className={styles.downWrapper}>
-              <p className={styles.tweets}>{`${tweets} TWEETS`}</p>
-              <p
-                className={styles.followers}
-              >{`${followersWithComma} FOLLOWERS`}</p>
-              <button
-                className={`${styles.button} ${followButtonClass}`}
-                onClick={() => handleFollowButtonClick(id)}
-              >
-                <p className={styles.followText}>{followButtonText}</p>
-              </button>
-            </div>
-          </li>
-        );
-      })}
-    </ul>
+          return (
+            <li key={id} className={styles.item}>
+              <div className={styles.topWrapper}>
+                <img
+                  className={styles.clouds}
+                  src={clouds}
+                  alt="Clouds with a question mark and a progress bar"
+                  loading="lazy"
+                />
+                <img
+                  className={styles.goitLogo}
+                  src={goit}
+                  alt="The logo of GoIT company"
+                  loading="lazy"
+                />
+              </div>
+              <div className={styles.separator}>
+                <div className={styles.bagel}></div>
+                <img
+                  className={styles.avatar}
+                  src={avatar ? avatar : photoNotFound}
+                  alt={user}
+                  title={user}
+                  loading="lazy"
+                />
+              </div>
+              <div className={styles.downWrapper}>
+                <p className={styles.tweets}>{`${tweets} TWEETS`}</p>
+                <p
+                  className={styles.followers}
+                >{`${followersWithComma} FOLLOWERS`}</p>
+                <button
+                  className={`${styles.button} ${followButtonClass}`}
+                  onClick={() => handleFollowButtonClick(id)}
+                >
+                  <p className={styles.followText}>{followButtonText}</p>
+                </button>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
-};
+});
