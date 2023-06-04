@@ -185,6 +185,7 @@
   text-decoration: none;
   padding: 10px 20px;
   transition: all 0.2s ease;
+  color: var(--accent-color);
 
   &:hover,
   &:focus {
@@ -230,6 +231,10 @@ select:focus {
   border-radius: 5px;
   color: var(--secondary-color);
   transform: scale(1.05);
+}
+select option:hover {
+  background-color: var(--accent-color); /* Колір ховеру рядка */
+  color: var(--secondary-color); /* Колір тексту ховеру рядка */
 }
 
 .iconFilter {
