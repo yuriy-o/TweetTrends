@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AiFillFilter } from 'react-icons/ai';
+import { FadeLoader } from 'react-spinners';
 
 import * as API from '../../utils/Api';
 import { addComma } from '../../utils/addComma';
@@ -13,7 +13,10 @@ import styles from './tweestsList.module.css';
 
 export const TweetsList = React.memo(() => {
   const [tweets, setTweets] = useState([]);
-  const [filter, setFilter] = useState('show all'); // filter
+  const [loadedTweets, setLoadedTweets] = useState([]);
+  const [loadMoreVisible, setLoadMoreVisible] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [filter, setFilter] = useState('show all');
 
   useEffect(() => {
     const savedState = JSON.parse(localStorage.getItem('tweetsState'));
@@ -28,8 +31,11 @@ export const TweetsList = React.memo(() => {
   useEffect(() => {
     if (tweets.length > 0) {
       localStorage.setItem('tweetsState', JSON.stringify(tweets));
+      const filteredTweets = applyFilter(tweets, filter);
+      setLoadedTweets(filteredTweets.slice(0, 3)); // Завантажуємо перші 3 дані
+      setLoadMoreVisible(filteredTweets.length > 3);
     }
-  }, [tweets]);
+  }, [tweets, filter]);
 
   const handleFollowButtonClick = userId => {
     setTweets(prevTweets =>
@@ -47,22 +53,42 @@ export const TweetsList = React.memo(() => {
         return tweet;
       })
     );
+
+    // Оновити loadedTweets після зміни tweets
+    const filteredTweets = applyFilter(tweets, filter);
+    setLoadedTweets(filteredTweets.slice(0, 3));
+    setLoadMoreVisible(filteredTweets.length > 3);
   };
 
-  const filteredTweets = applyFilter(tweets, filter);
+  const handleLoadMore = () => {
+    setLoading(true); // Показуємо спіннер
 
-  function applyFilter(tweets, filter) {
+    const startIndex = loadedTweets.length;
+    const endIndex = startIndex + 3;
+    const newLoadedTweets = [
+      ...loadedTweets,
+      ...tweets.slice(startIndex, endIndex),
+    ];
+
+    setLoadedTweets(newLoadedTweets);
+
+    if (endIndex >= tweets.length) {
+      setLoadMoreVisible(false); // Приховуємо кнопку "Load More", якщо всі дані завантажено
+    }
+
+    setLoading(false); // Ховаємо спіннер та показуємо кнопку "Load More"
+  };
+
+  const applyFilter = (tweets, filter) => {
     if (filter === 'show all') {
       return tweets;
     } else if (filter === 'follow') {
-      return tweets.filter(tweet => !tweet.isFollowing);
+      return tweets.filter(tweet => tweet.follow);
     } else if (filter === 'followings') {
-      return tweets.filter(tweet => tweet.isFollowing);
+      return tweets.filter(tweet => tweet.following);
     }
     return tweets;
-  }
-
-  console.log('filteredTweets >>>>', filteredTweets);
+  };
 
   const handleFilterChange = e => {
     setFilter(e.target.value);
@@ -74,20 +100,16 @@ export const TweetsList = React.memo(() => {
         <Link to="/" className={styles.goBackLink}>
           &lt; Go Back
         </Link>
-        <div className={styles.filterContainer}>
-          <label htmlFor="filter">
-            <AiFillFilter className={styles.iconFilter} />
-          </label>
-          <select id="filter" value={filter} onChange={handleFilterChange}>
-            <option value="show all">Show All</option>
-            <option value="follow">Follow</option>
-            <option value="followings">Followings</option>
-          </select>
-        </div>
+
+        <select value={filter} onChange={handleFilterChange}>
+          <option value="show all">Show All</option>
+          <option value="follow">Follow</option>
+          <option value="followings">Followings</option>
+        </select>
       </div>
 
       <ul className={styles.tweetsList}>
-        {filteredTweets.map(
+        {loadedTweets.map(
           ({ id, user, tweets, followers, avatar, isFollowing }) => {
             const followersWithComma = addComma(followers);
             const followButtonText = isFollowing ? 'FOLLOWING' : 'FOLLOW';
@@ -138,6 +160,11 @@ export const TweetsList = React.memo(() => {
           }
         )}
       </ul>
+      {loadMoreVisible && (
+        <button className={styles.loadMoreButton} onClick={handleLoadMore}>
+          {loading ? <FadeLoader size={10} color="#502f9d" /> : 'Load More'}
+        </button>
+      )}
     </>
   );
 });

@@ -13,7 +13,7 @@ import styles from './tweestsList.module.css';
 
 export const TweetsList = React.memo(() => {
   const [tweets, setTweets] = useState([]);
-  const [filter, setFilter] = useState('show all'); // filter
+  const [filter, setFilter] = useState('show all');
 
   useEffect(() => {
     const savedState = JSON.parse(localStorage.getItem('tweetsState'));
@@ -61,8 +61,6 @@ export const TweetsList = React.memo(() => {
     }
     return tweets;
   }
-
-  console.log('filteredTweets >>>>', filteredTweets);
 
   const handleFilterChange = e => {
     setFilter(e.target.value);
