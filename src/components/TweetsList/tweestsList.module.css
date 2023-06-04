@@ -201,7 +201,6 @@
   }
 }
 
-/* filter */
 .filterContainer {
   display: flex;
   align-items: center;
@@ -233,8 +232,8 @@ select:focus {
   transform: scale(1.05);
 }
 select option:hover {
-  background-color: var(--accent-color); /* Колір ховеру рядка */
-  color: var(--secondary-color); /* Колір тексту ховеру рядка */
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 .iconFilter {
