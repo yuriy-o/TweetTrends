@@ -23,8 +23,7 @@ Router DOM for handling routing, and React Icons for including icons in the UI.
 
 To run the TweetTrends application locally, follow these steps:
 
-1. Clone the repository:
-   `git clone [https://github.com/yuriy-o/TweetTrends.git](https://github.com/yuriy-o/TweetTrends.git)`
+1. Clone the repository: `git clone https://github.com/yuriy-o/TweetTrends.git`
 2. Navigate to the project directory: `cd TweetTrends`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm start`
