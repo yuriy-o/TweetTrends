@@ -20,6 +20,7 @@
   grid-gap: 2em;
   max-width: calc(100% - 4em);
   margin: 0 auto;
+  margin-bottom: 50px;
 
   @media (min-width: 880px) {
     grid-template-columns: repeat(2, minmax(380px, 1fr));
@@ -171,24 +172,89 @@
   color: var(--primary-text-color);
 }
 .linkWrap {
-  text-align: left;
-  align-self: flex-start;
-  margin-left: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
 }
+
 .goBackLink {
   display: block;
-  margin-bottom: 30px;
+  margin-left: 30px;
   text-decoration: none;
   padding: 10px 20px;
   transition: all 0.2s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: rgba(80, 47, 157, 0.3);
-    border: 1px solid var(--accent-color);
+    box-shadow: inset 0 0 0 1px var(--accent-color);
     border-radius: 5px;
+    color: var(--secondary-color);
+    transform: scale(1.05);
   }
 
   &:active {
     color: var(--primary-text-color);
+  }
+}
+
+/* filter */
+.filterContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+label {
+  display: flex;
+  align-items: center;
+}
+select {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 500;
+
+  padding: 10px 0px 10px 20px;
+
+  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+
+  appearance: none;
+}
+select:hover,
+select:focus {
+  background-color: rgba(80, 47, 157, 0.3);
+  box-shadow: inset 0 0 0 1px var(--accent-color);
+  border-radius: 5px;
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.iconFilter {
+  color: var(--accent-color);
+  height: 30px;
+  width: 50px;
+}
+
+.loadMoreButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 20px;
+  margin-bottom: 40px;
+  background-color: rgba(80, 47, 157, 0.3);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(80, 47, 157, 0.8);
+    box-shadow: inset 0 0 0 2px var(--accent-color);
+    color: var(--secondary-color);
+    transform: scale(1.05);
   }
 }
