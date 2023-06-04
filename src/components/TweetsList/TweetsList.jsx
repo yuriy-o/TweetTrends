@@ -15,7 +15,7 @@ export const TweetsList = React.memo(() => {
   const [tweets, setTweets] = useState([]);
   const [filter, setFilter] = useState('show all');
   const [currentPage, setCurrentPage] = useState(1);
-  const tweetsPerPage = 6;
+  const tweetsPerPage = 3;
 
   useEffect(() => {
     const savedState = JSON.parse(localStorage.getItem('tweetsState'));
