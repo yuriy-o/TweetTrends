@@ -62,6 +62,8 @@ export const TweetsList = React.memo(() => {
     return tweets;
   }
 
+  console.log('filteredTweets >>>>', filteredTweets);
+
   const handleFilterChange = e => {
     setFilter(e.target.value);
   };
