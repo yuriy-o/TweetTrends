@@ -13,7 +13,9 @@ import styles from './tweestsList.module.css';
 
 export const TweetsList = React.memo(() => {
   const [tweets, setTweets] = useState([]);
-  const [filter, setFilter] = useState('show all'); // filter
+  const [filter, setFilter] = useState('show all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const tweetsPerPage = 6;
 
   useEffect(() => {
     const savedState = JSON.parse(localStorage.getItem('tweetsState'));
@@ -66,6 +68,13 @@ export const TweetsList = React.memo(() => {
     setFilter(e.target.value);
   };
 
+  const handleLoadMore = () => {
+    setCurrentPage(prevPage => prevPage + 1);
+  };
+
+  const indexOfLastTweet = currentPage * tweetsPerPage;
+  const currentTweets = filteredTweets.slice(0, indexOfLastTweet);
+
   return (
     <>
       <div className={styles.linkWrap}>
@@ -85,7 +94,7 @@ export const TweetsList = React.memo(() => {
       </div>
 
       <ul className={styles.tweetsList}>
-        {filteredTweets.map(
+        {currentTweets.map(
           ({ id, user, tweets, followers, avatar, isFollowing }) => {
             const followersWithComma = addComma(followers);
             const followButtonText = isFollowing ? 'FOLLOWING' : 'FOLLOW';
@@ -136,6 +145,12 @@ export const TweetsList = React.memo(() => {
           }
         )}
       </ul>
+
+      {currentTweets.length < filteredTweets.length && (
+        <button className={styles.loadMoreButton} onClick={handleLoadMore}>
+          Load More
+        </button>
+      )}
     </>
   );
 });
