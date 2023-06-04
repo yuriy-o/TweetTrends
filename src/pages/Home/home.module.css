@@ -1,19 +1,33 @@
 .homeSection {
-  width: var(--desktop-breakpoint);
+  max-width: var(--desktop-breakpoint);
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
 }
+
 .title {
-  margin-left: 60px;
   margin-bottom: 20px;
+  font-size: 30px;
+  margin-left: 40px;
 
-  font-size: 40px;
+  @media screen and (min-width: 480px) {
+    font-size: 40px;
+    margin-left: 60px;
+  }
 }
-.text {
-  margin-bottom: 20px;
 
-  font-size: 24px;
-  line-height: 36px;
-  text-indent: 60px;
+.text {
+  font-size: 18px;
+  line-height: 28px;
+  text-indent: 40px;
+
+  margin-bottom: 12px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+    line-height: 36px;
+    text-indent: 60px;
+
+    margin-bottom: 20px;
+  }
 }

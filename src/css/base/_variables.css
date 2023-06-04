@@ -1,8 +1,8 @@
 :root {
   /* ====================breakpoints==================== */
-  --mobile-breakpoint: 320px;
+  --mobile-breakpoint: 480px;
   --tablet-breakpoint: 768px;
-  --desktop-breakpoint: 1280px;
+  --desktop-breakpoint: 1200px;
   /* ====================colors==================== */
   --accent-color: #502f9d;
   --secondary-color: #ebd8ff;

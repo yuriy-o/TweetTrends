@@ -17,12 +17,17 @@
   justify-content: center;
 
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   background-color: var(--dark-background-color);
   box-shadow: 0 4px 8px 0 rgba(80, 47, 157, 0.2),
     0 6px 20px 0 rgba(80, 47, 157, 0.19);
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 50px;
+  }
 }
+
 .container {
   display: flex;
 
@@ -36,9 +41,13 @@
 
   text-decoration: none;
   color: var(--secondary-text-color);
-  font-size: 30px;
+  font-size: 20px;
 
   padding: 10px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 30px;
+  }
 }
 
 .menuLink:not(:last-child) {
