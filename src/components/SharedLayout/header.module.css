@@ -30,9 +30,14 @@
 
 .container {
   display: flex;
+  justify-content: space-between;
 
   width: 1200px;
   padding: 20px 40px;
+
+  @media screen and (min-width: 480px) {
+    justify-content: flex-start;
+  }
 }
 .menuLink {
   display: flex;
