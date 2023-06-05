@@ -4,7 +4,7 @@
 
 ## Test task
 
-![Creating repo from a template step 1](./assets/Overview.gif)
+![A brief overview of the application](./assets/Overview.gif)
 
 TweetTrends is a web application that provides users with access to a wide
 collection of tweets to analyze social trends and popular topics. It is built
