@@ -1,8 +1,8 @@
 **Read in [English](README.md).**
 
-# ✨ TweetTrends ✨
+# ✨ TweetTrends ✨ **// Тестове завдання**
 
-## Тестове завдання
+## Стислий огляд додатку
 
 ![Стислий огляд додатку](./assets/Overview.gif)
 

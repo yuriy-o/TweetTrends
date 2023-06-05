@@ -1,8 +1,8 @@
 **Читати [Українською](README.ua.md).**
 
-# ✨ TweetTrends ✨
+# ✨ TweetTrends ✨ **// Test task**
 
-## Test task
+## A brief overview of the application
 
 ![A brief overview of the application](./assets/Overview.gif)
 
