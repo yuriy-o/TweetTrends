@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
 
+  position: relative;
+  z-index: 1;
+
   max-width: var(--desktop-breakpoint);
   padding-left: 20px;
   padding-right: 20px;
