@@ -1,6 +1,8 @@
+**Читати [Українською](README.ua.md).**
+
 # ✨ TweetTrends ✨
 
-## Тестове завдання
+## Test task
 
 ![Creating repo from a template step 1](./assets/Overview.gif)
 
