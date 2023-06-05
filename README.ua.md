@@ -1,6 +1,6 @@
 **Read in [English](README.md).**
 
-✨ TweetTrends ✨
+# ✨ TweetTrends ✨
 
 ## Тестове завдання
 
