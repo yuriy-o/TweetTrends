@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/TweetTrends/static/css/main.2b47a2ad.css",
-    "main.js": "/TweetTrends/static/js/main.a23c1fba.js",
+    "main.js": "/TweetTrends/static/js/main.9d8b17a0.js",
     "static/css/990.c6eb6fc1.chunk.css": "/TweetTrends/static/css/990.c6eb6fc1.chunk.css",
     "static/js/990.0c5eb0af.chunk.js": "/TweetTrends/static/js/990.0c5eb0af.chunk.js",
-    "static/css/832.2835f7e4.chunk.css": "/TweetTrends/static/css/832.2835f7e4.chunk.css",
-    "static/js/832.3e3a2d2f.chunk.js": "/TweetTrends/static/js/832.3e3a2d2f.chunk.js",
+    "static/css/600.6446c0b8.chunk.css": "/TweetTrends/static/css/600.6446c0b8.chunk.css",
+    "static/js/600.fba8cf4b.chunk.js": "/TweetTrends/static/js/600.fba8cf4b.chunk.js",
     "static/js/815.8deb2bae.chunk.js": "/TweetTrends/static/js/815.8deb2bae.chunk.js",
     "static/media/Montserrat-Medium.ttf": "/TweetTrends/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
     "static/media/Montserrat-Bold.ttf": "/TweetTrends/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
@@ -13,15 +13,15 @@
     "static/media/photo-not-found.jpg": "/TweetTrends/static/media/photo-not-found.08e2fa5ab1fad1ab1fd5.jpg",
     "index.html": "/TweetTrends/index.html",
     "main.2b47a2ad.css.map": "/TweetTrends/static/css/main.2b47a2ad.css.map",
-    "main.a23c1fba.js.map": "/TweetTrends/static/js/main.a23c1fba.js.map",
+    "main.9d8b17a0.js.map": "/TweetTrends/static/js/main.9d8b17a0.js.map",
     "990.c6eb6fc1.chunk.css.map": "/TweetTrends/static/css/990.c6eb6fc1.chunk.css.map",
     "990.0c5eb0af.chunk.js.map": "/TweetTrends/static/js/990.0c5eb0af.chunk.js.map",
-    "832.2835f7e4.chunk.css.map": "/TweetTrends/static/css/832.2835f7e4.chunk.css.map",
-    "832.3e3a2d2f.chunk.js.map": "/TweetTrends/static/js/832.3e3a2d2f.chunk.js.map",
+    "600.6446c0b8.chunk.css.map": "/TweetTrends/static/css/600.6446c0b8.chunk.css.map",
+    "600.fba8cf4b.chunk.js.map": "/TweetTrends/static/js/600.fba8cf4b.chunk.js.map",
     "815.8deb2bae.chunk.js.map": "/TweetTrends/static/js/815.8deb2bae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2b47a2ad.css",
-    "static/js/main.a23c1fba.js"
+    "static/js/main.9d8b17a0.js"
   ]
 }
