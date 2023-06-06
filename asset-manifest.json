@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/TweetTrends/static/css/main.2ead6f1b.css",
-    "main.js": "/TweetTrends/static/js/main.40f4e776.js",
+    "main.css": "/TweetTrends/static/css/main.bccbbe5d.css",
+    "main.js": "/TweetTrends/static/js/main.e517c468.js",
     "static/css/990.c6eb6fc1.chunk.css": "/TweetTrends/static/css/990.c6eb6fc1.chunk.css",
     "static/js/990.0c5eb0af.chunk.js": "/TweetTrends/static/js/990.0c5eb0af.chunk.js",
     "static/css/600.c4b86afa.chunk.css": "/TweetTrends/static/css/600.c4b86afa.chunk.css",
-    "static/js/600.6348a946.chunk.js": "/TweetTrends/static/js/600.6348a946.chunk.js",
+    "static/js/600.06054e00.chunk.js": "/TweetTrends/static/js/600.06054e00.chunk.js",
     "static/js/815.8deb2bae.chunk.js": "/TweetTrends/static/js/815.8deb2bae.chunk.js",
     "static/media/Montserrat-Medium.ttf": "/TweetTrends/static/media/Montserrat-Medium.c86e3b9010ff63c99166.ttf",
     "static/media/Montserrat-Bold.ttf": "/TweetTrends/static/media/Montserrat-Bold.2c155811b35513d5beaa.ttf",
     "static/media/clouds.png": "/TweetTrends/static/media/clouds.032662a2a907475127d7.png",
     "static/media/photo-not-found.jpg": "/TweetTrends/static/media/photo-not-found.08e2fa5ab1fad1ab1fd5.jpg",
     "index.html": "/TweetTrends/index.html",
-    "main.2ead6f1b.css.map": "/TweetTrends/static/css/main.2ead6f1b.css.map",
-    "main.40f4e776.js.map": "/TweetTrends/static/js/main.40f4e776.js.map",
+    "main.bccbbe5d.css.map": "/TweetTrends/static/css/main.bccbbe5d.css.map",
+    "main.e517c468.js.map": "/TweetTrends/static/js/main.e517c468.js.map",
     "990.c6eb6fc1.chunk.css.map": "/TweetTrends/static/css/990.c6eb6fc1.chunk.css.map",
     "990.0c5eb0af.chunk.js.map": "/TweetTrends/static/js/990.0c5eb0af.chunk.js.map",
     "600.c4b86afa.chunk.css.map": "/TweetTrends/static/css/600.c4b86afa.chunk.css.map",
-    "600.6348a946.chunk.js.map": "/TweetTrends/static/js/600.6348a946.chunk.js.map",
+    "600.06054e00.chunk.js.map": "/TweetTrends/static/js/600.06054e00.chunk.js.map",
     "815.8deb2bae.chunk.js.map": "/TweetTrends/static/js/815.8deb2bae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ead6f1b.css",
-    "static/js/main.40f4e776.js"
+    "static/css/main.bccbbe5d.css",
+    "static/js/main.e517c468.js"
   ]
 }
