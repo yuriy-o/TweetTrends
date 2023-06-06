@@ -3,13 +3,13 @@
 
 body {
   margin: 0;
-  background-color: var(--main-background-color);
+  background-color: var(--secondary-color-theme);
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #502f9d;
+  color: var(--accent-color-theme);
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;

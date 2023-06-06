@@ -19,8 +19,8 @@
   margin: 0 auto;
   margin-bottom: 30px;
 
-  background-color: var(--dark-background-color);
-  box-shadow: 0 4px 8px 0 rgba(80, 47, 157, 0.2),
+  background-color: var(--accent-color);
+  box-shadow: 0 4px 8px 0 var(--accent-color-theme),
     0 6px 20px 0 rgba(80, 47, 157, 0.19);
 
   @media screen and (min-width: 480px) {
@@ -30,7 +30,8 @@
 
 .container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
 
   width: 1200px;
   padding: 20px 40px;
@@ -38,6 +39,10 @@
   @media screen and (min-width: 480px) {
     justify-content: flex-start;
   }
+}
+.menuWrap {
+  display: flex;
+  flex: 1;
 }
 .menuLink {
   display: flex;
@@ -82,4 +87,7 @@
 .iconTweet {
   color: var(--secondary-text-color);
   margin-right: 10px;
+}
+.themeToggleContainer {
+  display: flex;
 }

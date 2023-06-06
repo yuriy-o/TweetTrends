@@ -7,8 +7,13 @@
   --accent-color: #502f9d;
   --secondary-color: #ebd8ff;
 
+  /* ====================Colours for Theme==================== */
+  --accent-color-theme: #502f9d;
+  --secondary-color-theme: #ebd8ff;
+
   --main-background-color: var(--secondary-color);
   --dark-background-color: var(--accent-color);
+  --dark-theme-background-color: #0f0f0f;
 
   --primary-text-color: var(--accent-color);
   --secondary-text-color: var(--secondary-color);
@@ -18,9 +23,6 @@
   --btn-following-color: #5cd3a8;
   --btn-following-hover-color: #54c099;
   --btn-following-border-color: #128f61;
-
-  --btn-gradient-start: #419ef1;
-  --btn-gradient-end: #9bd0ff;
 
   /* ====================shadow==================== */
   --box-shadow-item: -2.6px 6.9px 20.6px 0px var(--accent-color);
