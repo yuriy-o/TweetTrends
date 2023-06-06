@@ -1,0 +1,12 @@
+.themeIcons {
+  display: block;
+
+  color: var(--secondary-color);
+  width: 20px;
+  height: 20px;
+
+  @media screen and (min-width: 480px) {
+    width: 30px;
+    height: 30px;
+  }
+}
