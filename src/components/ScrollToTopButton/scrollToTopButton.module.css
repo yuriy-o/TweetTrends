@@ -1,9 +1,11 @@
 .scrollToTopButton {
   position: fixed;
-  right: 20px;
+  right: -100px;
   bottom: 20px;
+
   z-index: 200;
   visibility: hidden;
+  opacity: 0;
 
   width: 40px;
   height: 40px;
@@ -12,7 +14,7 @@
   background-color: var(--accent-color);
   border: 1px solid var(--secondary-color);
   border-radius: 50%;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 
   &:hover,
   &:focus {
@@ -25,6 +27,8 @@
 
 .visible {
   visibility: visible;
+  opacity: 1;
+  right: calc(2.5%);
 }
 
 .iconArrowUp {

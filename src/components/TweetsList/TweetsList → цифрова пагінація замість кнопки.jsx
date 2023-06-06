@@ -13,9 +13,9 @@ import styles from './tweestsList.module.css';
 
 export const TweetsList = React.memo(() => {
   const [tweets, setTweets] = useState([]);
-  const [filter, setFilter] = useState('show all'); //? 3 → Filter
-  const [currentPage, setCurrentPage] = useState(1); //! 4 → Load More
-  const tweetsPerPage = 3; //! 4 → Load More
+  const [filter, setFilter] = useState('show all'); // filter
+  const [currentPage, setCurrentPage] = useState(1);
+  const tweetsPerPage = 6;
 
   useEffect(() => {
     const savedState = JSON.parse(localStorage.getItem('tweetsState'));
@@ -68,14 +68,15 @@ export const TweetsList = React.memo(() => {
     setFilter(e.target.value);
   };
 
-  //! 4 → Load More
-  const handleLoadMore = () => {
-    setCurrentPage(prevPage => prevPage + 1);
-  };
+  // Pagination
+  const indexOfLastTweet = currentPage * tweetsPerPage;
+  const indexOfFirstTweet = indexOfLastTweet - tweetsPerPage;
+  const currentTweets = filteredTweets.slice(
+    indexOfFirstTweet,
+    indexOfLastTweet
+  );
 
-  const indexOfLastTweet = currentPage * tweetsPerPage; //! 4 → Load More
-  // const indexOfFirstTweet = indexOfLastTweet - tweetsPerPage; //! 4 → Load More
-  const currentTweets = filteredTweets.slice(0, indexOfLastTweet); //! 4 → Load More
+  const paginate = pageNumber => setCurrentPage(pageNumber);
 
   return (
     <>
@@ -94,6 +95,7 @@ export const TweetsList = React.memo(() => {
           </select>
         </div>
       </div>
+
       <ul className={styles.tweetsList}>
         {currentTweets.map(
           ({ id, user, tweets, followers, avatar, isFollowing }) => {
@@ -147,11 +149,23 @@ export const TweetsList = React.memo(() => {
         )}
       </ul>
 
-      {/* //! 4 → Load More */}
-      {currentTweets.length < filteredTweets.length && (
-        <button className={styles.loadMoreButton} onClick={handleLoadMore}>
-          Load More
-        </button>
+      {filteredTweets.length > tweetsPerPage && (
+        <div className={styles.pagination}>
+          {Array.from(
+            { length: Math.ceil(filteredTweets.length / tweetsPerPage) },
+            (_, index) => (
+              <button
+                key={index}
+                className={
+                  index + 1 === currentPage ? styles.activePage : styles.page
+                }
+                onClick={() => paginate(index + 1)}
+              >
+                {index + 1}
+              </button>
+            )
+          )}
+        </div>
       )}
     </>
   );
