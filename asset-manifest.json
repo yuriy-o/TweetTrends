@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TweetTrends/static/css/main.bccbbe5d.css",
-    "main.js": "/TweetTrends/static/js/main.a12c9261.js",
+    "main.js": "/TweetTrends/static/js/main.cb55f2dd.js",
     "static/css/990.c6eb6fc1.chunk.css": "/TweetTrends/static/css/990.c6eb6fc1.chunk.css",
     "static/js/990.0c5eb0af.chunk.js": "/TweetTrends/static/js/990.0c5eb0af.chunk.js",
     "static/css/600.bac2f640.chunk.css": "/TweetTrends/static/css/600.bac2f640.chunk.css",
@@ -13,7 +13,7 @@
     "static/media/photo-not-found.jpg": "/TweetTrends/static/media/photo-not-found.08e2fa5ab1fad1ab1fd5.jpg",
     "index.html": "/TweetTrends/index.html",
     "main.bccbbe5d.css.map": "/TweetTrends/static/css/main.bccbbe5d.css.map",
-    "main.a12c9261.js.map": "/TweetTrends/static/js/main.a12c9261.js.map",
+    "main.cb55f2dd.js.map": "/TweetTrends/static/js/main.cb55f2dd.js.map",
     "990.c6eb6fc1.chunk.css.map": "/TweetTrends/static/css/990.c6eb6fc1.chunk.css.map",
     "990.0c5eb0af.chunk.js.map": "/TweetTrends/static/js/990.0c5eb0af.chunk.js.map",
     "600.bac2f640.chunk.css.map": "/TweetTrends/static/css/600.bac2f640.chunk.css.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.bccbbe5d.css",
-    "static/js/main.a12c9261.js"
+    "static/js/main.cb55f2dd.js"
   ]
 }
