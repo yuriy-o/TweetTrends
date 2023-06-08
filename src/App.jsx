@@ -3,7 +3,7 @@ import { lazy, Suspense } from 'react';
 import { PacmanLoader } from 'react-spinners';
 // import dotenv from 'dotenv';
 
-import { SharedLayout } from './components/SharedLayout/SharedLayout';
+import { SharedLayout } from './layout/SharedLayout';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const Tweets = lazy(() => import('./pages/Tweets/Tweets'));

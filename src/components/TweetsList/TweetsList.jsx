@@ -5,9 +5,9 @@ import { AiFillFilter } from 'react-icons/ai';
 import * as API from '../../utils/Api';
 import { addComma } from '../../utils/addComma';
 
-import photoNotFound from '../../utils/images/photo-not-found.jpg';
-import clouds from '../../utils/images/clouds.png';
-import goit from '../../utils/images/goit.png';
+import photoNotFound from '../../assets/images/photo-not-found.jpg';
+import clouds from '../../assets/images/clouds.png';
+import goit from '../../assets/images/goit.png';
 
 import styles from './tweestsList.module.css';
 
