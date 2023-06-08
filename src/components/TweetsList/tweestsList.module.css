@@ -46,6 +46,9 @@
   padding: 38px 36px 18px 36px;
 }
 .clouds {
+  background-image: url('../../assets/images/clouds.png');
+  height: 168px;
+  width: 308px;
 }
 .goitLogo {
   position: absolute;

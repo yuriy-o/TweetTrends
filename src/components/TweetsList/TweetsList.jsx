@@ -6,7 +6,7 @@ import * as API from '../../utils/Api';
 import { addComma } from '../../utils/addComma';
 
 import photoNotFound from '../../assets/images/photo-not-found.jpg';
-import clouds from '../../assets/images/clouds.png';
+// import clouds from '../../assets/images/clouds.png';
 import goit from '../../assets/images/goit.png';
 
 import styles from './tweestsList.module.css';
@@ -106,12 +106,8 @@ export const TweetsList = React.memo(() => {
             return (
               <li key={id} className={styles.item}>
                 <div className={styles.topWrapper}>
-                  <img
-                    className={styles.clouds}
-                    src={clouds}
-                    alt="Clouds with a question mark and a progress bar"
-                    loading="lazy"
-                  />
+                  <div className={styles.clouds}></div>
+
                   <img
                     className={styles.goitLogo}
                     src={goit}
@@ -119,6 +115,7 @@ export const TweetsList = React.memo(() => {
                     loading="lazy"
                   />
                 </div>
+
                 <div className={styles.separator}>
                   <div className={styles.bagel}></div>
                   <img
