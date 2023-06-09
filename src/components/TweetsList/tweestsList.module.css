@@ -99,29 +99,27 @@
   flex-direction: column;
   align-items: center;
 }
-.tweets {
+
+.textInfo {
   font-family: var(--font-family);
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+  text-transform: uppercase;
   color: var(--secondary-text-color);
+}
 
+.tweets {
   margin-top: 62px;
   margin-bottom: 16px;
 }
-.followers {
-  font-family: var(--font-family);
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: var(--secondary-text-color);
 
+.followers {
   margin-bottom: 26px;
 }
+
 .button {
   display: flex;
   align-items: center;

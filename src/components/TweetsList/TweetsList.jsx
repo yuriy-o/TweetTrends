@@ -127,10 +127,12 @@ export const TweetsList = React.memo(() => {
                   />
                 </div>
                 <div className={styles.downWrapper}>
-                  <p className={styles.tweets}>{`${tweets} TWEETS`}</p>
                   <p
-                    className={styles.followers}
-                  >{`${followersWithComma} FOLLOWERS`}</p>
+                    className={`${styles.textInfo} ${styles.tweets}`}
+                  >{`${tweets} Tweets`}</p>
+                  <p
+                    className={`${styles.textInfo} ${styles.followers}`}
+                  >{`${followersWithComma} Followers`}</p>
                   <button
                     className={`${styles.button} ${followButtonClass}`}
                     onClick={() => handleFollowButtonClick(id)}
